@@ -1,0 +1,44 @@
+# Title
+'Aqueous transport with Kd and decay'
+#options for reactive chemical transport: ISPIA,INIBOUND,ISOLVC,ngamm,NGAS1,ichdump,kcpl,Ico2h2o,iTDS_REACT
+    2    1    5    0    0    0    2    0    0   
+#constraints for reactive chemical transport:  sl1min, rcour, stimax, cnfact
+   1.00e-4       0.9       4.0       1.0      
+#Read input and output file names:
+Therm-Database.dat        ! thermodynamic database
+iter.dat                       ! iteration information
+#Read input and output file names:
+Concentration.dat                   ! aqueous concentrations in tecplot form
+Mineral.dat                    ! mineral data  in tecplot form
+Gas.dat                    ! gas data  in tecplot form
+Monitoring.dat                    ! concentrations at specific elements over time
+#Weighting parameters
+       1.0       1.0    0.d-10   0.0d-05           ! itime wupc,dffun,dffung
+#data to convergence criteria:
+    1 0.100E-03  300 0.100E-04   30 0.100E-05  0.00E-05  0.00E-05    !  ........ TOLDC,TOLDR 
+#writing control variables: NWTI NWNOD NWCOM NWMIN NWAQ NWADS NWEXC iconflag(=1:mol/l) minflag(=1:Vf)
+    5    1    5    2    0    0    0    1    1   
+#pointer of nodes for writing in time:
+A1130
+#pointer of components for writing:
+    3    4    5    6    7
+#pointer of minerals for writing:
+    1    2    
+#Individual aqueous species for which to output concentrations in time and plot files:
+
+#Adsorption species for which to output concentrations in time and plot files:
+
+#Exchange species for which to output concentrations in time and plot files:
+
+#default values of chemical zone codes for grid blocks:
+    1    1    1    1    0    0    1    0
+#chemical zone codes for nodes:
+A1121   19    1    1    1    2    1    0    0    1    0
+A1141   19    1    1    1    3    1    0    0    1    0
+
+# this "end" record is needed now
+end 
+
+
+
+A1131   29    1    1    1    2    1    0    0    1    0
