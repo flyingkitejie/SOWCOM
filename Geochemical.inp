@@ -1,0 +1,113 @@
+# Title
+'Migration and transformation of organic matter'
+# '-----------------------------------------------------------------------------'
+# 'DEFINITION OF THE GEOCHEMICAL SYSTEM'
+# 'PRIMARY AQUEOUS SPECIES'
+'h2o'	    0
+'h+'	    0
+'na+'	    0
+'cl-'	    0
+'hco3-'     0
+'no3-'	    0
+'n2(aq)'    0
+'benzene'   0
+'o2(aq)'    0
+'*'
+# 'AQUEOUS KINETICS'
+ 2                ! total number of kinetic aqueous reactions
+  1   !Oxygen TEA                  
+       5   -1.0000  'benzene' -7.5000 'o2(aq)' 6.0000 'h+'  6.0000 'hco3-'  -3.000 'h2o'
+       1      1                                         !kinetic model index, No.mechanism
+          5.90d-07                                      !forward rate constant (mol/kg,s)  
+          0                                             !species in product term
+          1  'o2(aq)'  2  3.125d-7                      !species in monod terms
+          0                                             !species in inhibition terms
+  2   !NO3 TEA
+       4   -1.0000  'benzene' -6.0000 'no3-' 6.0000 'hco3-' 3.000 'n2(aq)'
+       1      1                                         !kinetic model index, No.mechanism
+          3.59d-07                                      !forward rate constant (mol/kg,s)
+          0                          !species in product term
+          1   'no3-'   2  1.61d-7    !species in monod terms
+          1   'o2(aq)' 2  3.13d-5                       !species in inhibition terms
+'*'
+# 'AQUEOUS COMPLEXES'
+'oh-'    
+'co2(aq)'
+'co3-2'
+'naco3-'
+'nahco3(aq)'
+'*'
+# 'MINERALS'
+'*'
+# 'GASES'
+'*'
+# 'SURFACE COMPLEXES'
+'*'
+# 'species with Kd and decay    decay constant(1/s)'
+'*' 
+# 'EXCHANGEABLE CATIONS'
+'*' 
+#'----------------------------------------------------------------------------'
+# 'INITIAL AND BOUDARY WATER TYPES'
+1   2        !niwtype, nbwtype = number of initial and boundary waters
+# Index  Speciation T(C)  P(bar)
+1               25.0      1.0	     
+#'        icon        guess         ctot         '
+'h2o'      1        0.1000E+01  0.1000E+01      ,  ,   0.   
+'h+'       1        0.1889E-06  0.1001E-06      ,  ,   0.       
+'na+'      1        0.1000E+00  0.1000E+00      ,  ,   0.       
+'cl-'      1        0.1000E+00  0.1000E+00      ,  ,   0.       
+'hco3-'    1        0.2060E-09  0.2751E-09      ,  ,   0.       
+'no3-'     1        0.9048E-10  0.9048E-10      ,  ,   0.       
+'n2(aq)'   1        0.1500E-09  0.1500E-09      ,  ,   0.       
+'benzene'  1        0.1261E-09  0.1261E-09      ,  ,   0.       
+'o2(aq)'   1        0.1548E-10  0.1548E-10      ,  ,   0.       
+'*'    
+# Index  Speciation T(C)  P(bar)
+1               25.0      1.0	     
+#'        icon        guess         ctot         '
+'h2o'      1        0.1000E+01  0.1000E+01      ,  ,   0.   
+'h+'       1        0.1889E-06  0.1001E-06      ,  ,   0.       
+'na+'      1        0.1000E+00  0.1000E+00      ,  ,   0.       
+'cl-'      1        0.1000E+00  0.1000E+00      ,  ,   0.       
+'hco3-'    1        0.2060E-09  0.2751E-09      ,  ,   0.       
+'no3-'     1        0.9048E-10  0.9048E-10      ,  ,   0.       
+'n2(aq)'   1        0.1500E-09  0.1500E-09      ,  ,   0.       
+'benzene'  1        0.1261E-00  0.1261E-00      ,  ,   0.       
+'o2(aq)'   1        0.1548E-10  0.1548E-10      ,  ,   0.       
+'*'    
+# Index  Speciation T(C)  P(bar)
+2               25.0      1.0	     
+#'        icon        guess         ctot         '
+'h2o'      1        0.1000E+01  0.1000E+01      ,  ,   0.   
+'h+'       1        0.1889E-06  0.1001E-06      ,  ,   0.       
+'na+'      1        0.1000E+00  0.1000E+00      ,  ,   0.       
+'cl-'      1        0.1000E+00  0.1000E+00      ,  ,   0.       
+'hco3-'    1        0.2060E-09  0.2751E-09      ,  ,   0.       
+'no3-'     1        0.9048E-10  0.9048E-10      ,  ,   0.       
+'n2(aq)'   1        0.1500E-09  0.1500E-09      ,  ,   0.       
+'benzene'  1        0.1261E-09  0.1261E-09      ,  ,   0.       
+'o2(aq)'   1        0.1548E-10  0.1548E-10      ,  ,   0.       
+'*'    
+#'----------------------------------------------------------------------------'
+#'INITIAL MINERAL ZONES'
+'*'
+#'----------------------------------------------------------------------------'
+#'INITIAL gas ZONES'
+'*'
+#'----------------------------------------------------------------------------'
+#'Permeability-Porosity Zones'
+'*'
+#'----------------------------------------------------------------------------'
+#'INITIAL SURFACE ADSORPTION ZONES'
+'*'
+#'----------------------------------------------------------------------------'
+#'INITIAL LINEAR EQUILIBRIUM Kd ZONE'
+'*'                
+#'---------------------------------------if Sden=0 Kd store retardation factor'
+#'INITIAL ZONES OF CATION EXCHANGE'
+'*'
+#'----------------------------------------------------------------------------'
+#'end'
+
+
