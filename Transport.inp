@@ -1,0 +1,64 @@
+# Title
+'Migration and transformation of organic matter'
+#options for reactive chemical transport: ISPIA,INIBOUND,ISOLVC,ngamm,NGAS1,ichdump,kcpl,Ico2h2o,iTDS_REACT
+    2    1    5    0    0    0    2    0    0   
+#constraints for reactive chemical transport:  sl1min, rcour, stimax, cnfact
+   1.00e-4       0.9       4.0       1.0      
+#Read input and output file names:
+Therm-Database.dat        ! thermodynamic database
+iter.dat                       ! iteration information
+#Read input and output file names:
+Concentration.dat                   ! aqueous concentrations in tecplot form
+Mineral.dat                    ! mineral data  in tecplot form
+Gas.dat                    ! gas data  in tecplot form
+Monitoring.dat                    ! concentrations at specific elements over time
+#Weighting parameters
+       1.0       1.0    0.d-10   0.0d-05           ! itime wupc,dffun,dffung
+#data to convergence criteria:
+    1 0.100E-03  300 0.100E-04   30 0.100E-05  0.00E-05  0.00E-05    !  ........ TOLDC,TOLDR 
+#writing control variables: NWTI NWNOD NWCOM NWMIN NWAQ NWADS NWEXC iconflag(=1:mol/l) minflag(=1:Vf)
+   20    1    7    0    12    0    0    1    1   
+#pointer of nodes for writing in time:
+AC117
+#pointer of components for writing:
+    3    4    5    6    7    8    9
+#pointer of minerals for writing:
+    
+#Individual aqueous species for which to output concentrations in time and plot files:
+    3    4    5    6    7    8    9   10  11  12  13  14
+#Adsorption species for which to output concentrations in time and plot files:
+
+#Exchange species for which to output concentrations in time and plot files:
+
+#default values of chemical zone codes for grid blocks:
+    1    1    0    0    0    0    0    0
+#chemical zone codes for nodes:
+A11 2    0    0    1    2    0    0    0    0    0    0
+A11 3    0    0    1    2    0    0    0    0    0    0
+A11 4    0    0    1    2    0    0    0    0    0    0
+A11 5    0    0    1    2    0    0    0    0    0    0
+A11 6    0    0    1    2    0    0    0    0    0    0
+A11 7    0    0    1    2    0    0    0    0    0    0
+A11 8    0    0    1    2    0    0    0    0    0    0
+A11 9    0    0    1    2    0    0    0    0    0    0
+A1110    0    0    1    2    0    0    0    0    0    0
+A1111    0    0    1    2    0    0    0    0    0    0
+A1112    0    0    1    2    0    0    0    0    0    0
+A1113    0    0    1    2    0    0    0    0    0    0
+A1114    0    0    1    2    0    0    0    0    0    0
+A1115    0    0    1    2    0    0    0    0    0    0
+A1116    0    0    1    2    0    0    0    0    0    0
+A1117    0    0    1    2    0    0    0    0    0    0
+A1118    0    0    1    2    0    0    0    0    0    0
+A1119    0    0    1    2    0    0    0    0    0    0
+A1120    0    0    1    2    0    0    0    0    0    0
+A1121    0    0    1    2    0    0    0    0    0    0
+A1122    0    0    1    2    0    0    0    0    0    0
+A1123    0    0    1    2    0    0    0    0    0    0
+A1124    0    0    1    2    0    0    0    0    0    0
+A1125    0    0    1    2    0    0    0    0    0    0
+A1126    0    0    1    2    0    0    0    0    0    0
+
+# this "end" record is needed now
+end 
+
